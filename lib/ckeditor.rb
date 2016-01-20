@@ -90,6 +90,10 @@ module Ckeditor
   @@picture_model = nil
   @@attachment_file_model = nil
 
+  # Delete resource path
+  mattr_accessor :prefix_ckeditor_namespace
+  @@prefix_ckeditor_namespace = nil
+
   # Default way to setup Ckeditor. Run rails generate ckeditor to create
   # a fresh initializer with all configuration values.
   #
@@ -172,6 +176,14 @@ module Ckeditor
 
   def self.attachment_file_adapter
     attachment_file_model.to_adapter
+  end
+
+  def self.prefix_ckeditor_namespace
+    @@prefix_ckeditor_namespace
+  end
+
+  def self.prefix_ckeditor_namespace=(value)
+    @@prefix_ckeditor_namespace = value
   end
 
   # Setup authorization to be run as a before filter
