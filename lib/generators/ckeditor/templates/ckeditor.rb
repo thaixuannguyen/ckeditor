@@ -46,4 +46,7 @@ Ckeditor.setup do |config|
   # Used when CKEditor CDN enabled
   # By default: "/assets/ckeditor/config.js"
   # config.js_config_url = "/assets/ckeditor/config.js"
+
+  # Add namespace config
+  # config.prefix_ckeditor_namespace = "/admin"
 end

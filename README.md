@@ -294,6 +294,16 @@ By default, only the user that logged in can access the models (with actions *in
 
 You can customize these two policy files as you like.
 
+## Adding namespaces
+
+You can change namespace to which ckeditor belongs by the following config (must have one prefix "/" and no suffix "/"):
+
+```ruby
+Ckeditor.setup do |config|
+  config.prefix_ckeditor_namespace = "/admin"
+end
+```
+
 ## I18n
 
 ```yml
